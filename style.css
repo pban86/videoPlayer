@@ -1,0 +1,45 @@
+*{
+
+        padding:0;
+        margin: 0;
+        box-sizing: border box;
+      
+}
+
+body.html{
+    background-color:yellow;
+}
+
+div#container{
+    width:900px;
+    height: 600px;
+    border:2px solid black;
+    margin: 0 auto;
+
+    text-align:center;
+    box-sizing: border-box;
+    background-color: pink;
+}
+
+#numText{
+
+    font-size:60px;
+}
+
+.btn{
+width:100px;
+height:40px;
+font-size:15px;
+background-color: turquoise;
+
+}
+
+.selectBtn{
+    width:100px;
+    height:20px;
+    font-size:10px;
+    background-color: yellow;
+    
+    }
+
+

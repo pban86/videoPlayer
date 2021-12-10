@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+
+
+    <head>
+        <title>Video JavaScript</title>
+        <link rel="stylesheet" href="style.css"/>
+        
+        <script>
+
+            var vol=1;
+ 
+
+            function playVid() {
+
+                document.getElementById('vid').play();
+
+            }
+
+
+            function pauseVid() {
+                document.getElementById('vid').pause();
+            }
+
+
+           //Funtion needs fixing as volume will go out of 0,1 range with this method
+            function updateVol(volData){
+                console.log("Volume",vol);
+                vol +=volData;
+                document.getElementById('vid').volume=vol;
+            }
+
+
+
+            function changeVideo(videoName){
+              document.getElementById('vid').src=videoName;
+            }
+
+
+            function muteControls(muteAction){
+                console.log("hello");
+
+                if (muteAction == 1) {
+                    document.getElementById('vid').muted=true;
+                    console.log("Volume",vol);
+                }
+                else{
+                    document.getElementById('vid').muted=false;
+                    console.log("Volume",vol);
+                }
+          
+            }
+        </script>
+
+
+
+    </head>
+
+        <body>
+            <div id="container">
+                <video id="vid" src="HulkPart1.mp4" width="600px" controls></video>
+                
+                <br/>
+
+                <button class="selectBtn" onClick ="changeVideo('HulkPart1.mp4')">HULK Part 1</button>
+                <button class="selectBtn" onClick ="changeVideo('HulkPart2.mp4')">HULK Part 2</button>
+
+                <br/>
+                
+                
+                <button class="btn" onClick="playVid()">Play</button>
+                <button class="btn" onclick="pauseVid()">Pause</button>
+                <button class="btn" onClick="updateVol(-0.1)">---</button>
+                <button class="btn" onCLick="updateVol(0.1)">+++</button>
+                <button class="btn" onCLick="muteControls(1)">Mute</button>
+                <button class="btn" onCLick="muteControls(0)">Unmute</button>
+              
+            </div>
+
+
+        </body>
+
+
+
+
+
+
+
+</html>
